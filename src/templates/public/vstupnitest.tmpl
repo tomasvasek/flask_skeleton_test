@@ -1,0 +1,15 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}vstupni test {% endblock %}
+
+{% block content %}
+  <form method="POST" id='insert-form'>
+    {{ form.hidden_tag() }}
+      {{ render_input_field(form.Jmeno) }}
+    {{ render_input_field(form.otazka1) }}
+    {{ render_input_field(form.otazka2) }}
+      {{ render_input_field(form.otazka3) }}
+      {{ render_submit() }}
+  </form>
+{% endblock %}

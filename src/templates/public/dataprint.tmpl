@@ -1,0 +1,12 @@
+{% from "macros/fields.tmpl" import render_input_fiel, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}LIST {% endblock %}
+
+{% block content %}
+     <table>
+         {%  for n in data %}
+             <tr><td>{{ n }}</td>
+         {% endfor %}
+     </table>
+{% endblock %}
