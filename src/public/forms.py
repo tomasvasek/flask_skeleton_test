@@ -72,3 +72,5 @@ class ValidaceRodic(Form):
 class ValidateDite(Form):
     parent_id = SelectField()
     jmeno = TextField("prijmeni", validators=[InputRequired(message="You cant leave this empty")])
+
+
