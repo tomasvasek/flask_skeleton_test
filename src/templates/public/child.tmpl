@@ -1,0 +1,13 @@
+{% from "macros/fields.tmpl" import render_input_field,render_input_choice, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}Dite {% endblock %}
+
+{% block content %}
+    <form method="POST" id='insert-form'>
+    {{ form.hidden_tag() }}
+    {{ render_input_field(form.jmeno) }}
+    {{ render_input_choice(form.parent_id) }}
+    {{ render_submit() }}
+  </form>
+{% endblock %}

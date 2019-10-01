@@ -62,3 +62,13 @@ class vstupnitestform(Form):
         Length(min=8, max=8, message="Slovo ma 8 znaku"),
         InputRequired(message="Vypln pole")
     ])
+
+class ValidaceRodic(Form):
+    prijmeni = TextField("prijmeni",validators=[InputRequired(message="You cant leave this empty")])
+    #pohlavi = IntegerField("pohlavi", validators=[InputRequired])
+    pohlavi = SelectField("Pohlavi",choices=[(1,"Zena"),(2,"Muz")],
+                          default=1,validators=[InputRequired()])
+
+class ValidateDite(Form):
+    parent_id = SelectField()
+    jmeno = TextField("prijmeni", validators=[InputRequired(message="You cant leave this empty")])
